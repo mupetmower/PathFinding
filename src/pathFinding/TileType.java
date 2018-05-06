@@ -1,4 +1,4 @@
-package pathFinding;
+package pathfinding;
 
 public enum TileType {
 	Wall,

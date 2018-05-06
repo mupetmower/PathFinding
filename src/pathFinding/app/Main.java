@@ -1,6 +1,8 @@
-package pathFinding;
+package pathfinding.app;
 
 import java.awt.Point;
+
+import pathfinding.Grid;
 
 public class Main {
 

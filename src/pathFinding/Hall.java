@@ -1,4 +1,4 @@
-package pathFinding;
+package pathfinding;
 
 import java.util.Random;
 

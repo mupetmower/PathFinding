@@ -1,4 +1,4 @@
-package pathFinding;
+package pathfinding;
 
 import javax.swing.Action;
 import javax.swing.Icon;
