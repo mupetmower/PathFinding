@@ -1,4 +1,4 @@
-package pathfinding;
+package pathfinding.grid.creation;
 
 import java.util.Random;
 

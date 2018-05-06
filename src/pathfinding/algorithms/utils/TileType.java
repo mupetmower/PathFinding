@@ -1,4 +1,4 @@
-package pathfinding;
+package pathfinding.algorithms.utils;
 
 public enum TileType {
 	Wall,

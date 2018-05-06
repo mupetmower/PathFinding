@@ -1,4 +1,4 @@
-package pathfinding;
+package pathfinding.grid;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -19,7 +19,12 @@ import javax.swing.JTextField;
 import javax.swing.Timer;
 import javax.swing.border.LineBorder;
 
-public class Grid extends JFrame {
+import pathfinding.algorithms.utils.Path;
+import pathfinding.grid.creation.GridCreator;
+import pathfinding.grid.creation.IntRange;
+import pathfinding.pathfinder.Scout;
+
+public class GridForm extends JFrame {
 	
 	//private Timer timer;
 	//private final int SEARCH_SPEED = 1000;
@@ -30,12 +35,14 @@ public class Grid extends JFrame {
 	//private int rows;
 	//private int cols;
 	
+	boolean allowDiag = false;
+	
 	GridCreator gridCreator;
 	JPanel gridHolder;
 	
 	private ArrayList<JPanel> menuPanels = new ArrayList<JPanel>();
 	
-	public Grid() {
+	public GridForm() {
 		Init();
 	}
 	
@@ -53,7 +60,7 @@ public class Grid extends JFrame {
 		
 		this.getContentPane().add(gridHolder);
 		
-		//scout = new Scout(new Point(gridCreator.getStartX(), gridCreator.getStartY()));
+		scout = new Scout();
 		
 		
 //		ActionListener timerTask = new ActionListener() {
@@ -224,10 +231,11 @@ public class Grid extends JFrame {
 			}
 		}
 		
-		scout = new Scout(gridCreator.getStartX(), gridCreator.getStartY(), turnTime);
+		scout = new Scout(turnTime);
+		final int time = turnTime;
 		
 		CompletableFuture<Path> findPath = new CompletableFuture<Path>();
-		findPath.supplyAsync(() -> ScoutSearchAStar(gridCreator.getStartX(), gridCreator.getStartY())).whenCompleteAsync((p, err) -> {
+		findPath.supplyAsync(() -> ScoutSearchAStar(gridCreator.getStartX(), gridCreator.getStartY(), time, allowDiag)).whenCompleteAsync((p, err) -> {
 			if (p != null) {
 				System.out.println("Found it!");
 				returnedPath = p;
@@ -314,8 +322,8 @@ public class Grid extends JFrame {
 			
 	}
 	
-	public Path ScoutSearchAStar(int startX, int startY) {
-		return scout.aStar(startX, startY);
+	public Path ScoutSearchAStar(int startX, int startY, int turnTime, boolean diag) {
+		return scout.runAStar(startX, startY, turnTime, diag);
 		
 	}
 	
@@ -335,7 +343,7 @@ public class Grid extends JFrame {
 		//gridCreator.Reset();
 		gridHolder = gridCreator.getGridHolder();
 		
-		scout = new Scout(new Point(gridCreator.getStartX(), gridCreator.getStartY()));
+		//scout = new Scout();
 		
 		
 		getContentPane().add(gridHolder);

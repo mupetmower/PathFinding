@@ -1,6 +1,8 @@
-package pathfinding;
+package pathfinding.grid.creation;
 
 import java.util.Random;
+
+import pathfinding.algorithms.utils.Direction;
 
 public class Hall {
 

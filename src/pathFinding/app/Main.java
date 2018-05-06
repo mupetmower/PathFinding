@@ -2,13 +2,13 @@ package pathfinding.app;
 
 import java.awt.Point;
 
-import pathfinding.Grid;
+import pathfinding.grid.GridForm;
 
 public class Main {
 
 	
 	public static void main(String[] args) {
-		Grid grid = new Grid();
+		GridForm gridForm = new GridForm();
 		//grid.ScoutSearch();
 	}
 
