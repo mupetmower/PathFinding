@@ -1,9 +1,8 @@
-package pathfinding.grid;
+package pathfind.grid;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
-import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -16,13 +15,12 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.Timer;
 import javax.swing.border.LineBorder;
 
-import pathfinding.algorithms.utils.Path;
-import pathfinding.grid.creation.GridCreator;
-import pathfinding.grid.creation.IntRange;
-import pathfinding.pathfinder.Scout;
+import pathfind.algorithms.utils.Path;
+import pathfind.grid.creation.GridCreator;
+import pathfind.grid.creation.IntRange;
+import pathfind.pathfinder.Scout;
 
 public class GridForm extends JFrame {
 	

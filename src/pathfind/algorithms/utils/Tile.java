@@ -1,4 +1,4 @@
-package pathfinding.algorithms.utils;
+package pathfind.algorithms.utils;
 
 import javax.swing.Action;
 import javax.swing.Icon;

@@ -1,6 +1,6 @@
-package pathfinding.app;
+package pathfind.app;
 
-import pathfinding.grid.GridForm;
+import pathfind.grid.GridForm;
 
 public class Main {
 

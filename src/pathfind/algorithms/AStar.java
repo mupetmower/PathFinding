@@ -1,4 +1,4 @@
-package pathfinding.algorithms;
+package pathfind.algorithms;
 
 import java.awt.Color;
 import java.util.ArrayList;
@@ -6,10 +6,10 @@ import java.util.Collections;
 
 import javax.swing.border.LineBorder;
 
-import pathfinding.algorithms.utils.Path;
-import pathfinding.algorithms.utils.Tile;
-import pathfinding.algorithms.utils.TileType;
-import pathfinding.grid.creation.GridCreator;
+import pathfind.algorithms.utils.Path;
+import pathfind.algorithms.utils.Tile;
+import pathfind.algorithms.utils.TileType;
+import pathfind.grid.creation.GridCreator;
 
 public class AStar {
 	

@@ -1,14 +1,13 @@
-package pathfinding.grid.creation;
+package pathfind.grid.creation;
 
 import java.awt.Color;
 import java.awt.Point;
 
-import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
-import pathfinding.algorithms.utils.Tile;
-import pathfinding.algorithms.utils.TileType;
+import pathfind.algorithms.utils.Tile;
+import pathfind.algorithms.utils.TileType;
 
 public class GridCreator {
 	

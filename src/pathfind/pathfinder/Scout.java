@@ -1,17 +1,11 @@
-package pathfinding.pathfinder;
+package pathfind.pathfinder;
 
-import java.awt.Color;
 import java.util.ArrayList;
-import java.util.Collections;
 
-import javax.swing.border.LineBorder;
-
-import pathfinding.algorithms.AStar;
-import pathfinding.algorithms.utils.Direction;
-import pathfinding.algorithms.utils.Path;
-import pathfinding.algorithms.utils.Tile;
-import pathfinding.algorithms.utils.TileType;
-import pathfinding.grid.creation.GridCreator;
+import pathfind.algorithms.AStar;
+import pathfind.algorithms.utils.Direction;
+import pathfind.algorithms.utils.Path;
+import pathfind.algorithms.utils.Tile;
 
 public class Scout {
 	
